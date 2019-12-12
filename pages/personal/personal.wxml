@@ -1,0 +1,48 @@
+<!--pages/personal/personal.wxml-->
+<view>
+  <!-- 用户头像和用户名 -->
+  <view class="info">
+    <!-- 没有登录时，显示的页面 -->
+    <view class="info_one" hidden="{{ onOff }}">
+      <image src="/icon/my.png"></image>
+      <button open-type="getUserInfo" bindgetuserinfo="login" style="background:#fff" size="mini">登录</button>
+    </view>
+    <!-- 登录的时候，显示的页面 -->
+    <view class="info_one" hidden="{{ !onOff }}">
+      <image src="{{ userInfo.avatarUrl }}" style="border-radius:50%"></image>
+      <text>{{ userInfo.nickName }}</text>
+    </view>
+  </view>
+
+  <!-- 浏览记录 -->
+  <view>
+    <!-- 没登录时，显示的文本内容 -->
+    <view hidden="{{ onOff }}" style="text-align:center;margin-top:200px;">
+      <text>登录之后才可以查看历史浏览~~~</text>
+    </view>
+    <!-- 登录之后显示的历史记录 -->
+    <view hidden="{{ !onOff }}" >
+      <view wx:if="{{ lists.length <= 0 }}" style="text-align:center;margin-top:200px;">
+        空空如也~~~
+      </view>
+      <view wx:else>
+        <view class="page">
+      
+      <view class="page__bd">
+        <view class="weui-cells">
+
+          <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{ lists }}" data-id="{{ item.id }}" data-title="{{ item.title }}">
+            <mp-cell value="{{ item.title }}" footer="点击查看"></mp-cell>
+          </mp-slideview>
+
+        </view>
+
+      </view>
+    </view>
+
+      </view>
+    </view>
+
+  </view>
+
+</view>

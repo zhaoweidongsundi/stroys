@@ -1,0 +1,25 @@
+/* pages/type/type.wxss */
+
+/* 加背景图片，一定是网络地址， https */
+page{
+    background: url("https://f11.baidu.com/it/u=1446189089,1561578606&fm=72") no-repeat;
+    background-size: 100%  100%;
+}
+
+.types{
+  margin-left: 8%;
+  margin-top: 200rpx;
+}
+.list{
+  width: 40%;
+  height: 50px;
+  border: 2px solid  #ccc;
+  
+  float: left;
+  margin-left: 3%;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}

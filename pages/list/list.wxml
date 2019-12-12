@@ -1,0 +1,26 @@
+<!--pages/list/list.wxml-->
+<view>
+  <!-- 显示用户或者游客 -->
+  <view class="username">
+    <text hidden="{{ onOff }}">游客</text>
+    <text hidden="{{ !onOff }}">欢迎:{{ userInfo.nickName }}</text>
+  </view>
+  <view class="content">
+
+    <view class="page">
+      
+      <view class="page__bd">
+        <view class="weui-cells">
+
+          <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{ lists }}" data-id="{{ item.id }}" data-title="{{ item.title }}">
+            <mp-cell value="{{ item.title }}" footer="左滑查看"></mp-cell>
+          </mp-slideview>
+
+        </view>
+
+      </view>
+    </view>
+
+
+  </view>
+</view>

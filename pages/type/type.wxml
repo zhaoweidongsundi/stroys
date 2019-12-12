@@ -1,0 +1,7 @@
+<view class="types">
+
+  <view wx:for="{{ types }}" bindtap="toLists" data-classifyid="{{ item.classifyId }}" data-classify="{{ item.classify }}" class="list" style="background: {{ bgColor }};">
+      {{ item.classify }}
+  </view>
+
+</view>

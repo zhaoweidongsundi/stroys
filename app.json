@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/type/type",
+    "pages/detail/detail",
+    "pages/list/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "童话故事",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/type/type",
+      "text": "童话分类",
+      "iconPath": "/icon/index.png",
+      "selectedIconPath": "/icon/indexFull.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/icon/my.png",
+        "selectedIconPath": "/icon/myFull.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "mp-cells": "/component/cells/cells",
+    "mp-cell": "/component/cell/cell",
+    "mp-slideview": "/component/slideview/slideview"
+  }
+}

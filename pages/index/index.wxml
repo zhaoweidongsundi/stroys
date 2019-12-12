@@ -1,0 +1,20 @@
+<!--index.wxml-->
+
+<view>
+  <view>
+    <swiper class="swiper" indicator-dots autoplay interval="1000">
+      <swiper-item  wx:for="{{ pics }}" wx:key="*this">
+        <image src="{{ item }}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="seconds">
+    <text style="margin-right:20px;">{{ second }}s</text>
+    <text bindtap="jump">跳过广告</text>
+  </view>
+
+  <view class="title">
+    <text>欢迎来到童话故事</text>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+/**app.wxss**/
+ 
+@import './component/weui-wxss/dist/style/weui.wxss';
